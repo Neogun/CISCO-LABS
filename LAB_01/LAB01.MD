@@ -3,7 +3,7 @@
 
 ### Топология сети
 
-
+![This is an image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_01/Images/Topology%20Network.jpg)
 
 ------------
 
@@ -104,6 +104,7 @@ S1(config-line)#transport input telnet
 
 *Шаг 2. Настройте IP-адрес на компьютере PC-A.*
 
+![This is an image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_01/Images/Config%20PC-A%20ETH.jpg)
 
 **Часть 3. Проверка сетевых подключений**
 шаг 1. отобразите конфигурацию коммутатора.
@@ -115,12 +116,16 @@ Vlan1 is up, line protocol is up
 Состояние VLAN  и канальный протокол находятся в режиме UP.
 
 *Шаг 2. Протестируйте сквозное соединение, отправив эхо-запрос.*
-a)
 
-b)
+a) ![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_01/Images/PING%20self%20PC-A.jpg)
+
+b) ![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_01/Images/PING%20PC-A%20to%20VLAN%201.jpg)
 
 *Шаг 3. Проверьте удаленное управление коммутатором S1.*
-a-e)
+
+a-e) 
+
+![IMAGE](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_01/Images/Chapter%203.%20Step%203..jpg)
 
 **Вопросы для повторения**
 1.	Зачем необходимо настраивать пароль VTY для коммутатора?
