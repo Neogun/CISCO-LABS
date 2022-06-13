@@ -4,7 +4,7 @@
 
 ### Топология
 
-
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_02/Images/Topology.jpg)
 
 ### Таблица адресации
 
@@ -22,7 +22,17 @@
 ### Часть 1. Создание и настройка сети
 *Шаг 1. Подключите сеть в соответствии с топологией.*
 
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_02/Images/Chapter%201.%20Step%201.jpg)
+
 *Шаг 2. Настройте узлы ПК.*
+
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_02/Images/Config%20PC-A.jpg)
+
+Настройка PC-A 
+
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_02/Images/Config%20PC-B.jpg)
+
+Настройка PC-B
 
 *Шаг 3. Выполните инициализацию и перезагрузку коммутаторов.*
 Перазгрузка обоих коммутаторов была выполнена командной **reload**.
@@ -72,7 +82,10 @@ b) Подключитесь к коммутаторам S1 и S2 через ко
 МАС-адрес коммутатора S2 Fast Ethernet 0/1: 00d0.d35a.ea01 (bia 00d0.d35a.ea01)
 
 *Шаг 2. Просмотрите таблицу МАС-адресов коммутатора.*
-a-b) 
+
+a-b) ![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_02/Images/S2_MAC-ADDRESS-TABLE.jpg)
+
+Таблица MAC-адресов коммутатора S2
 
 В таблице MAC-адресов есть несколько записей. Как видно на картинке, он видит всю сеть целиком. То есть MAC-адреса S1, свой внутренний MAC-адрес интерфейса F0/1 и MAC-адреса двух компьютеров.
 Компьютер PC-B сопоставлен с портов FA0/18 в который он подключен, остальные порты адреса сопоставлены с портом FA0/1.
