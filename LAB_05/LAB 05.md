@@ -4,7 +4,7 @@
 
 ### Топология
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/Topology.jpg)
 
 ------------
 
@@ -33,7 +33,7 @@
 
 *Шаг 1. Создайте сеть согласно топологии.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/network.jpg)
 
 *Шаг 2. Выполните инициализацию и перезагрузку маршрутизатора и коммутатора.*
 
@@ -86,11 +86,11 @@ R1(config-if)#do wr
 
 *Шаг 4. Настройте компьютер PC-A.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/config%20PC-A.jpg)
 
 *Шаг 5. Проверьте подключение к сети.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20ping%20to%20R1.jpg)
 
 ### Часть 2. Настройка маршрутизатора для доступа по протоколу SSH
 
@@ -134,10 +134,10 @@ Building configuration...
 
 *Шаг 6. Установите соединение с маршрутизатором по протоколу SSH.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20SSH%20Login.jpg)
 
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20SSH.jpg)
 
 
 ------------
@@ -219,12 +219,12 @@ S1#ssh ?
   
 *Шаг 2. Установите с коммутатора S1 соединение с маршрутизатором R1 по протоколу SSH.*
 a) 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/S1%20to%20R1%20SSH.jpg)
 
 b,c,d) 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/S1%20to%20R1%20SSH%20second.jpg)
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/exit%20from%20R1%20to%20S1.jpg)
 
 Какие версии протокола SSH поддерживаются при использовании интерфейса командной строки? **Первая и вторая версия протокола SSH.**
 
