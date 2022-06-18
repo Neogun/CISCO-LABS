@@ -3,7 +3,7 @@
 
 ### Топология
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_06/Images/Topology.jpg)
 
 ### Таблица адресации
 
@@ -40,7 +40,7 @@
 
 *Шаг 1. Создайте сеть согласно топологии.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_06/Images/Network%20PT.jpg)
 
 *Шаг 2. Настройте базовые параметры для маршрутизатора.*
 
@@ -115,11 +115,11 @@ S2(config-line)#do wr
 
 **Настройка PC-A  **
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_06/Images/PC-A%20Config.jpg)
 
 **Настройка PC-B  **
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_06/Images/PC-B%20Config.jpg)
 
 ### Часть 2. Создание сетей VLAN и назначение портов коммутатора и
 
@@ -194,11 +194,11 @@ b.	Убедитесь, что VLAN назначены на правильные 
 
 **show VLAN S1**
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_06/Images/show%20VLAN%20S1.jpg)
 
 **show VLAN S2**
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_06/Images/show%20VLAN%20S2.jpg)
 
 
 ### Часть 3. Конфигурация магистрального канала стандарта 802.1Q между коммутаторами
@@ -263,7 +263,7 @@ Building configuration...
 *c.	Убедитесь, что вспомогательные интерфейсы работают*
 
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_06/Images/show%20ip%20interface%20R1.jpg)
 
 ### Часть 5. Проверьте, работает ли маршрутизация между VLAN
 
@@ -271,19 +271,20 @@ Building configuration...
 
 a.	Отправьте эхо-запрос с PC-A на шлюз по умолчанию.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_06/Images/PING%20PC-A%20to%20default-gateway.jpg)
+
 b.	Отправьте эхо-запрос с PC-A на PC-B.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_06/Images/PING%20PC-A%20to%20PC-B.jpg)
 
 c.	Отправьте команду ping с компьютера PC-A на коммутатор S2.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_06/Images/PING%20PC-A%20to%20S2.jpg)
 
 *Шаг 2. Пройдите следующий тест с PC-B*
 В окне командной строки на PC-B выполните команду tracert на адрес PC-A.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_06/Images/tracert%20PC-B%20to%20PC-A.jpg)
 
 Какие промежуточные IP-адреса отображаются в результатах?
 **Адрес сабинтерфейса для VLAN 30 на R1. Дальше пакет идёт на L2 S1 уже на PC-A.**
