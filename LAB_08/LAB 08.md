@@ -4,7 +4,7 @@
 
 ### Топология
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_08/Images/Topology.jpg)
 
 
 ------------
@@ -40,7 +40,7 @@
 
 *Часть 1. Создание сети и настройка основных параметров устройства*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_08/Images/Network%20PT.jpg)
 
 *Шаг 2. Настройте базовые параметры каждого коммутатора. *
 
@@ -181,16 +181,16 @@ Building configuration...
 
 c.	Убедитесь, что маршрутизация работает с помощью пинга адреса G0/0/1 R2 из R1
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_08/Images/PING%20R1%20to%20G0_0_1%20R2.jpg)
 
 
 ------------
 
 ### Часть 2. Проверка назначения адреса SLAAC от R1
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_08/Images/IPv6%20PC-A.jpg)
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_08/Images/ipconfig%20PC-A.jpg)
 
 
 Откуда взялась часть адреса с идентификатором хоста? **С помощью технолгии EUI-64.**
@@ -199,7 +199,7 @@ c.	Убедитесь, что маршрутизация работает с п�
 
 *Шаг 1. Более подробно изучите конфигурацию PC-A.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_08/Images/ipconfig%20PC-A%20v2.jpg)
 
 *Шаг 2. Настройте R1 для предоставления DHCPv6 без состояния для PC-A.*
 
@@ -218,11 +218,11 @@ R1(config-if)# do wr
 
 e.	Проверьте вывод ipconfig /all и обратите внимание на изменения.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_08/Images/ipconfig%20PC-A%20v2.jpg)
 
 f.	Тестирование подключения с помощью пинга IP-адреса интерфейса G0/1 R2.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_08/Images/PING%20PC-A%20to%20R2%20Gig0_0_1.jpg)
 
 
 ------------
@@ -246,7 +246,7 @@ R1(config-if)# ipv6 dhcp server R2-STATEFUL
 
 *Шаг 1. Включите PC-B и проверьте адрес SLAAC, который он генерирует.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_08/Images/ipconfig%20PC-B.jpg)
 
 *Шаг 2. Настройте R2 в качестве агента DHCP-ретрансляции для локальной сети на G0/0/1.*
 
@@ -259,4 +259,4 @@ R2(config-if)# ipv6 dhcp relay destination 2001: db8: acad: 2::1 g0/0/0\
 
 c.	Проверьте подключение с помощью пинга IP-адреса интерфейса R0 G0/0/1.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_08/Images/PING%20PC-B%20to%20R1%20GI0_0_1.jpg)
