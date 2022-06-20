@@ -41,29 +41,29 @@
 
 a) Настройте имена устройств в соответствии с топологией.
 
-Switch>
-Switch>en
-Switch#conf t
-Switch(config)#hostname S1
-S1(config)#no ip domain-lookup 
-S1(config)#banner motd # No entry for unauthorised people!!!#
+Switch>  
+Switch>en  
+Switch#conf t  
+Switch(config)#hostname S1  
+S1(config)#no ip domain-lookup   
+S1(config)#banner motd # No entry for unauthorised people!!!#  
 
 b) Настройте IP-адреса, как указано в таблице адресации.
-S1(config)#int vlan 1
-S1(config-if)#ip address 192.168.1.11 255.255.255.0
-S1(config-if)#no shu
+S1(config)#int vlan 1  
+S1(config-if)#ip address 192.168.1.11 255.255.255.0  
+S1(config-if)#no shu  
 
 c) Назначьте cisco в качестве паролей консоли и VTY.
 
-S1(config)#line vty 0 15
-S1(config-line)#logging synchronous 
-S1(config-line)#password cisco
-S1(config-line)#login
-
+S1(config)#line vty 0 15  
+S1(config-line)#logging synchronous   
+S1(config-line)#password cisco  
+S1(config-line)#login  
+  
 d) Назначьте class в качестве пароля доступа к привилегированному режиму EXEC.
 
-S1(config)#service password-encryption 
-S1(config)#enable secret class
+S1(config)#service password-encryption   
+S1(config)#enable secret class  
 
 **!~Аналогичные настройки были произведены для коммутатора S2.**
 
@@ -78,8 +78,8 @@ MAC PC-B: 0030.A32A.0005
 
 b) Подключитесь к коммутаторам S1 и S2 через консоль и введите команду show interface F0/1 на каждом коммутаторе.
 
-МАС-адрес коммутатора S1 Fast Ethernet 0/1: 0060.5cb0.2301 (bia 0060.5cb0.2301)
-МАС-адрес коммутатора S2 Fast Ethernet 0/1: 00d0.d35a.ea01 (bia 00d0.d35a.ea01)
+МАС-адрес коммутатора S1 Fast Ethernet 0/1: 0060.5cb0.2301 (bia 0060.5cb0.2301)  
+МАС-адрес коммутатора S2 Fast Ethernet 0/1: 00d0.d35a.ea01 (bia 00d0.d35a.ea01)  
 
 *Шаг 2. Просмотрите таблицу МАС-адресов коммутатора.*
 
