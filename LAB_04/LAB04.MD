@@ -122,10 +122,10 @@ d)
 
 ![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/Images/show%20ipv6%20link%20local.jpg)
 
-*Какие группы многоадресной рассылки назначены интерфейсу G0/0?*
- Joined group address(es):
-    FF02::1
-    FF02::1:FF00:1
+*Какие группы многоадресной рассылки назначены интерфейсу G0/0?*  
+ Joined group address(es):  
+    FF02::1  
+    FF02::1:FF00:1  
 	
 *Шаг 2. Активируйте IPv6-маршрутизацию на R1.*
 
@@ -135,20 +135,22 @@ a) Адрес не назначен.
 
 b) R1(config)#ipv6 unicast-routing 
 
-c) Почему PC-B получил глобальный префикс маршрутизации и идентификатор подсети, которые вы настроили на R1?** Да, получил.** По такому принципу работает SLAAC, маршрутизатор начинает рассылать icmpv6 запросы.
+c) Почему PC-B получил глобальный префикс маршрутизации и идентификатор подсети, которые вы настроили на R1? **Да, получил.** 
+По такому принципу работает SLAAC, маршрутизатор начинает рассылать icmpv6 запросы.
 
 *Шаг 3. Назначьте IPv6-адреса интерфейсу управления (SVI) на S1.*
 a)
-S1# conf t
-S1(config)# sdm prefer dual-ipv4-and-ipv6 default
-S1(config)# end
-S1# reload
 
-S1(config)#int vlan1
-S1(config-if)#ipv6 address 2001:db8:acad:1::b/64
-S1(config-if)#ipv6 address fe80::1 link-local 
-S1(config-if)#no shu
+S1# conf t  
+S1(config)# sdm prefer dual-ipv4-and-ipv6 default  
+S1(config)# end  
+S1# reload  
 
+S1(config)#int vlan1  
+S1(config-if)#ipv6 address 2001:db8:acad:1::b/64  
+S1(config-if)#ipv6 address fe80::1 link-local   
+S1(config-if)#no shu  
+  
 ![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/Images/show%20ip%20vlan%201.jpg)
 
 b)
