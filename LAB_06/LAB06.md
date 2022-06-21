@@ -50,7 +50,7 @@ Router>en
 Router#clock set 18:00:00 june 18 2022  
 Router#conf t  
 Router(config)#hostname R1  
-R1(config)#no ip domain lookup   
+R1(config)#no ip domain-lookup   
 R1(config)#enable secret class  
 R1(config)#service password-encryption  
 R1(config)#banner motd ###ENTRY CLOSED!!!#  
@@ -76,7 +76,7 @@ Switch>en
 Switch#clock set 18:10:00 june 18 2022  
 Switch#conf t  
 Switch(config)#hostname S1  
-S1(config)#no ip domain lookup   
+S1(config)#no ip domain-lookup   
 S1(config)#enable secret class  
 S1(config)#service password-encryption  
 S1(config)#banner motd ###ENTRY CLOSED!!!###  
@@ -96,8 +96,8 @@ Switch>
 Switch>en  
 Switch#clock set 18:10:00 june 18 2022  
 Switch#conf t  
-Switch(config)#hostname S1  
-S2(config)#no ip domain lookup   
+Switch(config)#hostname S2 
+S2(config)#no ip domain-lookup   
 S2(config)#enable secret class  
 S2(config)#service password-encryption   
 S2(config)#banner motd ###ENTRY CLOSED!!!###  
