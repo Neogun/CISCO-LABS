@@ -137,7 +137,7 @@ Building configuration...
 ![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20SSH%20Login.jpg)
 
 
-![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20SSH.jpg)](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20SSH.jpg)
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20SSH.jpg)
 
 
 ------------
