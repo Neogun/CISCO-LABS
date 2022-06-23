@@ -4,7 +4,7 @@
 
 ### Топология
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_10/Images/Topology.jpg)
 
 
 ------------
@@ -34,7 +34,7 @@
 
 *Шаг 1. Создайте сеть согласно топологии.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_10/Images/Network%20.jpg)
 
 *Шаг 2. Произведите базовую настройку маршрутизаторов.*
 
@@ -187,17 +187,17 @@ R2(config-router)#network 192.168.1.0 0.0.0.255 area 0
 
 f.	Убедитесь, что OSPFv2 работает между маршрутизаторами. Выполните команду, чтобы убедиться, что R1 и R2 сформировали смежность.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_10/Images/show%20ip%20ospf%20neighbor.jpg)
 
 Какой маршрутизатор является DR? Какой маршрутизатор является BDR? Каковы критерии отбора?
 
 g.	На R1 выполните команду show ip route ospf, чтобы убедиться, что сеть R2 Loopback1 присутствует в таблице маршрутизации. Обратите внимание, что поведение OSPF по умолчанию заключается в объявлении интерфейса обратной связи в качестве маршрута узла с использованием 32-битной маски.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_10/Images/show%20ip%20route%20ospf.jpg)
 
 h.	Запустите Ping до  адреса интерфейса R2 Loopback 1 из R1. Выполнение команды ping должно быть успешным.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_10/Images/ping%20R1%20to%20Loopback%201%20R2.jpg)
 
 
 
@@ -246,7 +246,7 @@ R2(config-router)#auto-cost reference-bandwidth 10000
         Please ensure reference bandwidth is consistent across all routers.  
 R2(config-router)#  
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_10/Images/clear%20ospf%20R1.jpg)
 
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_10/Images/clear%20ospf%20R2.jpg)
