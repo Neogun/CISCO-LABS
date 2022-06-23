@@ -7,7 +7,7 @@
 
 ### Топология
 
-![image]()
+![image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/Topology.jpg)
 
 
 ------------
@@ -53,7 +53,7 @@
 
 *Шаг 1. Создайте сеть.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/Network%20PT.jpg)
 
 b.	Инициализация устройств
 
@@ -110,7 +110,7 @@ Building configuration...
 
 *b.	Проверьте текущую конфигурацию на R1*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/show%20IP%20Interface%20brief%20R1.jpg)
 
 *c.	Убедитесь, что IP-адресация и интерфейсы находятся в состоянии up / up (при необходимости устраните неполадки).*
 
@@ -205,10 +205,10 @@ S2(config-if)#switchport mode trunk
 S2(config-if)#switchport trunk native vlan 333  
 
 **show interface trunk S1  **
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/show%20interface%20Trunk%20S1.jpg)
 
 **show interface trunk S2  **
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/show%20interface%20Trunk%20S2.jpg)
 
 *c.	Отключить согласование DTP F0/1 на S1 и S2. *
 
@@ -252,11 +252,11 @@ b.	Убедитесь, что неиспользуемые порты отклю
 
 **show interfaces status S1**
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/show%20interface%20status%20S1.jpg)
 
 **show interfaces status S2**
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/show%20interface%20status%20S2.jpg)
 
 *Шаг 4. Документирование и реализация функций безопасности порта.*
 
@@ -285,7 +285,7 @@ S1(config-if)#switch port-security violation restrict
 
 c.	Verify port security on S1 F0/6.
 
-![image]()
+![image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/show%20port-security%20fa0.6%20S1.jpg)
 
 d.	Включите безопасность порта для F0 / 18 на S2. Настройте каждый активный порт доступа таким образом, чтобы он автоматически добавлял адреса МАС, изученные на этом порту, в текущую конфигурацию. и e.	Настройте следующие параметры безопасности порта на S2 F / 18:
 
@@ -303,11 +303,11 @@ f.	Проверка функции безопасности портов на S2
 
 **show port-security interface f0/18**
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/show%20port-security%20interface%20f0.18%20S2.jpg)
 
 **show port-security address S2**
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/show%20port-security%20address%20S2.jpg)
 
 *Шаг 5. Реализовать безопасность DHCP snooping*
 a.	На S2 включите DHCP snooping и настройте DHCP snooping во VLAN 10.
@@ -326,15 +326,15 @@ d.	Проверка DHCP Snooping на S2.
 
 **show ip dhcp snooping S2**
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/show%20ip%20dhcp%20snooping%20S2.jpg)
 
 e.	В командной строке на PC-B освободите, а затем обновите IP-адрес.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/PC-B%20release%20and%20renew.jpg)
 
 f.	Проверьте привязку отслеживания DHCP с помощью команды show ip dhcp snooping binding.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/show%20ip%20dhcp%20snooping%20binding%20S2.jpg)
 
 *Шаг 6. Реализация PortFast и BPDU Guard*
 
@@ -357,13 +357,13 @@ S2(config-if)#spanning-tree bpduguard enable
 
 c.	Убедитесь, что защита BPDU и PortFast включены на соответствующих портах.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/Portfast%20fa0.6%20S1.jpg)
 
 Шаг 7. Проверьте наличие сквозного ⁪подключения.
 
 Проверка проблем не выявила. Проверку осуществил путём команды пинг на все IP-адреса с PC-A.
 
-![image]()
+![image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_09/Images/PING%20PC-A.jpg)
 
 
 ------------
