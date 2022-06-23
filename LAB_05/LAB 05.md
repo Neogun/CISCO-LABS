@@ -134,10 +134,10 @@ Building configuration...
 
 *Шаг 6. Установите соединение с маршрутизатором по протоколу SSH.*
 
-![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20SSH%20Login.jpg)
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20SSH%20Login.jpg)  
 
 
-![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20SSH.jpg)
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20SSH.jpg)  
 
 
 ------------
@@ -187,10 +187,10 @@ Building configuration...
 
 *Шаг 3. Установите соединение с коммутатором по протоколу SSH.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20SSH%20to%20S1%20Login.jpg)
 
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_05/Images/PC-A%20SSH%20to%20S1%20Sucess.jpg)
 
 Удалось ли вам установить SSH-соединение с коммутатором? **Да, удалось.**
 
