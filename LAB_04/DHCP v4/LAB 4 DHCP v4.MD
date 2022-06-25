@@ -207,7 +207,7 @@ S1(config-line)#line vty 0 15
 S1(config-line)#logging synchronous  
 S1(config-line)#password cisco  
 S1(config-line)#login  
-S1(config-if-range)#do wr  
+S1(config-line)#do wr  
 Building configuration...  
 [OK]  
 
@@ -217,7 +217,7 @@ Switch>
 Switch>en  
 Switch#clock set 15:15:00 june 23 2022  
 Switch#conf t  
-Switch(config)#hostname S1  
+Switch(config)#hostname S2  
 S2(config)#no ip domain-lookup  
 S2(config)#enable secret class  
 S2(config)#service password-encryption  
@@ -230,7 +230,7 @@ S2(config-line)#line vty 0 15
 S2(config-line)#logging synchronous  
 S2(config-line)#password cisco  
 S2(config-line)#login  
-S2(config-if-range)#do wr  
+S2(config-line)#do wr  
 Building configuration...  
 [OK]  
 
