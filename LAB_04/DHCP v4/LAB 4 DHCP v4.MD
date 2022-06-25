@@ -7,7 +7,7 @@
 
 ### Топология
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/DHCP%20v4/Images/Topology.jpg)
 
 
 
@@ -19,12 +19,12 @@
 | ------------ | ------------ | ------------ | ------------ | ------------ |
 |R1   | G0/0/0  | 10.0.0.1 |255.255.255.252   | -  |
 | R1  | G0/0/1  |  - |  - | -  |
-| R1  | G0/0/1.100  | 192.168.1.1  |   |-   |
-| R1  | G0/0/1.200  | 192.168.1.65  |   |  - |
+| R1  | G0/0/1.100  | 192.168.1.1  | 255.255.255.192    |-   |
+| R1  | G0/0/1.200  | 192.168.1.65  | 255.255.255.224   |  - |
 |R1   | G0/0/1.1000   |-  | -  |  - |
 |R2   |  G0/0/0 | 10.0.0.2  |255.255.255.252   |-   |
-| R2  | G0/0/1  |   |   | -  |
-| S1  | VLAN 200  |   |   |   |
+| R2  | G0/0/1  |  192.168.1.97 | 255.255.255.240    | -  |
+| S1  | VLAN 200  | 192.168.1.66  255.255.255.224    | 192.168.1.96  |
 |S2   | VLAN 1  |   |   |   |
 | PC-A  |  NIC |DHCP   | DHCP | DHCP  |
 | PC-B  | NIC  | DHCP  |DHCP   |  DHCP |
@@ -87,7 +87,7 @@ R2 G0/0/1 192.168.1.97**
 
 *Шаг 2. Создайте сеть согласно топологии.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/DHCP%20v4/Images/Network%20PT.jpg)
 
 *Шаг 3. Произведите базовую настройку маршрутизаторов.*
 
@@ -159,7 +159,7 @@ R1(config-subif)#description TRUNK
 
 c.	Убедитесь, что вспомогательные интерфейсы работают.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/DHCP%20v4/Images/show%20IP%20Interface%20brief.jpg)
 
 Шаг 5.	Настройте G0/1 на R2, затем G0/0/0 и статическую маршрутизацию для обоих маршрутизаторов
 
@@ -178,9 +178,9 @@ R1(config-if)#ip address 10.0.0.1 255.255.255.252
 
 c.	Настройте маршрут по умолчанию на каждом маршрутизаторе, указываемом на IP-адрес G0/0/0 на другом маршрутизаторе.
 
-R1(config)#ip route 0.0.0.0 0.0.0.0 10.0.0.2
+R1(config)#ip route 0.0.0.0 0.0.0.0 10.0.0.2  
 
-R2(config)#ip route 0.0.0.0 0.0.0.0 10.0.0.1
+R2(config)#ip route 0.0.0.0 0.0.0.0 10.0.0.1  
 
 d.	Убедитесь, что статическая маршрутизация работает с помощью пинга до адреса G0/0/1 R2 от R1.
 
@@ -190,49 +190,49 @@ d.	Убедитесь, что статическая маршрутизация 
 
 **Настройка S1**
 
-Switch>
-Switch>en
-Switch#clock set 15:10:00 june 23 2022
-Switch#conf t
-Switch(config)#hostname S1
-S1(config)#no ip domain-lookup
-S1(config)#enable secret class
-S1(config)#service password-encryption
-S1(config)#banner motd ###ENTRY CLOSED!!!###
-S1(config)#line con 0
-S1(config-line)#logging synchronous
-S1(config-line)#password cisco
-S1(config-line)#login
-S1(config-line)#line vty 0 15
-S1(config-line)#logging synchronous
-S1(config-line)#password cisco
-S1(config-line)#login
-S1(config-if-range)#do wr
-Building configuration...
-[OK]
+Switch>  
+Switch>en  
+Switch#clock set 15:10:00 june 23 2022  
+Switch#conf t  
+Switch(config)#hostname S1  
+S1(config)#no ip domain-lookup  
+S1(config)#enable secret class  
+S1(config)#service password-encryption  
+S1(config)#banner motd ###ENTRY CLOSED!!!###  
+S1(config)#line con 0  
+S1(config-line)#logging synchronous  
+S1(config-line)#password cisco  
+S1(config-line)#login  
+S1(config-line)#line vty 0 15  
+S1(config-line)#logging synchronous  
+S1(config-line)#password cisco  
+S1(config-line)#login  
+S1(config-if-range)#do wr  
+Building configuration...  
+[OK]  
 
 **Настройка S2**
 
-Switch>
-Switch>en
-Switch#clock set 15:15:00 june 23 2022
-Switch#conf t
-Switch(config)#hostname S1
-S2(config)#no ip domain-lookup
-S2(config)#enable secret class
-S2(config)#service password-encryption
-S2(config)#banner motd ###ENTRY CLOSED!!!###
-S2(config)#line con 0
-S2(config-line)#logging synchronous
-S2(config-line)#password cisco
-S2(config-line)#login
-S2(config-line)#line vty 0 15
-S2(config-line)#logging synchronous
-S2(config-line)#password cisco
-S2(config-line)#login
-S2(config-if-range)#do wr
-Building configuration...
-[OK]
+Switch>  
+Switch>en  
+Switch#clock set 15:15:00 june 23 2022  
+Switch#conf t  
+Switch(config)#hostname S1  
+S2(config)#no ip domain-lookup  
+S2(config)#enable secret class  
+S2(config)#service password-encryption  
+S2(config)#banner motd ###ENTRY CLOSED!!!###  
+S2(config)#line con 0  
+S2(config-line)#logging synchronous  
+S2(config-line)#password cisco  
+S2(config-line)#login  
+S2(config-line)#line vty 0 15  
+S2(config-line)#logging synchronous  
+S2(config-line)#password cisco  
+S2(config-line)#login  
+S2(config-if-range)#do wr  
+Building configuration...  
+[OK]  
 
 
 *Шаг 7.	Создайте сети VLAN на коммутаторе S1.*
@@ -250,10 +250,10 @@ S1(config-vlan)#name Own
 
 b.	Настройте и активируйте интерфейс управления на S1 (VLAN 200), используя второй IP-адрес из подсети, рассчитанный ранее. Кроме того установите шлюз по умолчанию на S1.
 
-S1(config)#int vlan 200
-S1(config-if)#ip address 192.168.1.66 255.255.255.224  
-S1(config-if)#no shu  
-S1(config)#ip default-gateway 192.168.1.65
+S1(config)#int vlan 200  
+S1(config-if)#ip address 192.168.1.66 255.255.255.224    
+S1(config-if)#no shu    
+S1(config)#ip default-gateway 192.168.1.65  
 
 c.	Настройте и активируйте интерфейс управления на S2 (VLAN 1), используя второй IP-адрес из подсети, рассчитанный ранее. Кроме того, установите шлюз по умолчанию на S2
 
@@ -284,7 +284,7 @@ S2(config-if)#switchport access vlan 1
 
 b.	Убедитесь, что VLAN назначены на правильные интерфейсы.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/DHCP%20v4/Images/show%20vlan%20brief%20S1.jpg)
 
 Вопрос:
 Почему интерфейс F0/5 указан в VLAN 1?
@@ -306,7 +306,7 @@ S1(config-if)#do wr**
 
 e.	Проверьте состояние транка.
 
-![Image]() 
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/DHCP%20v4/Images/show%20vlan%20brief%20check%20TRUNK.jpg) 
 
 Порт fa0/5 пропал из таблицы VLAN. Так как native vlan не отображаются в ней.
 
@@ -348,19 +348,19 @@ R1(config)#ip dhcp excluded-address 192.168.1.97 192.168.1.101
 
 *Шаг 2.	Сохраните конфигурацию.*
 
-R1(config)#do wr
-Building configuration...
-[OK]
+R1(config)#do wr  
+Building configuration...  
+[OK]  
 
 *Шаг 3.	Проверка конфигурации сервера DHCPv4*
 
 a.	Чтобы просмотреть сведения о пуле, выполните команду show ip dhcp pool .
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/DHCP%20v4/Images/show%20ip%20dhcp%20pool.jpg)
 
 b.	Выполните команду show ip dhcp bindings для проверки установленных назначений адресов DHCP.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/DHCP%20v4/Images/show%20ip%20dhcp%20binding.jpg)
 
 **!~IP адрес отображается так как я ранее включил на PC-A автоматическую настройку.**
 
@@ -370,11 +370,11 @@ c.	Выполните команду show ip dhcp server statistics для пр�
 
 *Шаг 4.	Попытка получить IP-адрес от DHCP на PC-A*
 
-![image]()
+![image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/DHCP%20v4/Images/PC-A%20DHCP%20Check.jpg)
 
 c.	Проверьте подключение с помощью пинга IP-адреса интерфейса R1 G0/0/1.100
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/DHCP%20v4/Images/Ping%20PC-A%20to%20R1.jpg)
 
 
 ------------
@@ -393,15 +393,15 @@ Building configuration...
 
 a. Попытка получить IP-адрес от DHCP на PC-B
 
-![image]()
+![image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/DHCP%20v4/Images/PC-B%20DHCP%20Check.jpg)
 
 c.	Проверьте подключение с помощью пинга IP-адреса интерфейса R1 G0/0/1.
 
-![image]()
+![image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/DHCP%20v4/Images/ping%20PC-B%20to%20R1.jpg)
 
 d.	Выполните show ip dhcp binding для R1 для проверки назначений адресов в DHCP.
 
-![image]()
+![image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_04/DHCP%20v4/Images/show%20ip%20dhcp%20binding%202.jpg)
 
 e.	Выполните команду show ip dhcp server statistics для проверки сообщений DHCP.
 
