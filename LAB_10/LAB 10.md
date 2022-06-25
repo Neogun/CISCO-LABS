@@ -93,27 +93,27 @@ R2(config-if)#no shu
 
 *Шаг 3. Настройте базовые параметры каждого коммутатора.*
 
-**Настройка S1**
-Switch>
-Switch>en
-Switch#clock set 19:15:00 june 20 2022
-Switch#conf t
-Switch(config)#hostname S1
-S1(config)#no ip domain lookup
-S1(config)#enable secret class
-S1(config)#service password-encryption
-S1(config)#banner motd ###ENTRY CLOSED!!!###
-S1(config)#line con 0
-S1(config-line)#logging synchronous
-S1(config-line)#password cisco
-S1(config-line)#login
-S1(config-line)#line vty 0 15
-S1(config-line)#logging synchronous
-S1(config-line)#password cisco
-S1(config-line)#login
-S1(config-line)#do wr
-Building configuration...
-[OK]
+**Настройка S1**  
+Switch>  
+Switch>en  
+Switch#clock set 19:15:00 june 20 2022  
+Switch#conf t  
+Switch(config)#hostname S1  
+S1(config)#no ip domain lookup  
+S1(config)#enable secret class  
+S1(config)#service password-encryption  
+S1(config)#banner motd ###ENTRY CLOSED!!!###  
+S1(config)#line con 0    
+S1(config-line)#logging synchronous  
+S1(config-line)#password cisco  
+S1(config-line)#login  
+S1(config-line)#line vty 0 15 
+S1(config-line)#logging synchronous  
+S1(config-line)#password cisco  
+S1(config-line)#login  
+S1(config-line)#do wr  
+Building configuration...  
+[OK]  
 
 **Настройка S2**
 
