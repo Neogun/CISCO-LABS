@@ -93,45 +93,45 @@ R2 G0/0/1 192.168.1.97**
 
 **Настройка R1 **
 
-Router>en
-Router#clock set 14:05:00 june 23 2022
-Router#conf t
-Router(config)#hostname R1
-R1(config)#no ip domain-lookup
-R1(config)#enable secret class
-R1(config)#service password-encryption
-R1(config)#banner motd ###ENTRY CLOSED!!!#
-R1(config)#line con 0
-R1(config-line)#logging synchronous
-R1(config-line)#password cisco
-R1(config-line)#login
-R1(config)#line vty 0 15
-R1(config-line)#logging synchronous
-R1(config-line)#password cisco
-R1(config-line)#login
-R1(config-if)#do wr
+Router>en  
+Router#clock set 14:05:00 june 23 2022  
+Router#conf t  
+Router(config)#hostname R1  
+R1(config)#no ip domain-lookup  
+R1(config)#enable secret class  
+R1(config)#service password-encryption  
+R1(config)#banner motd ###ENTRY CLOSED!!!#  
+R1(config)#line con 0  
+R1(config-line)#logging synchronous  
+R1(config-line)#password cisco  
+R1(config-line)#login  
+R1(config)#line vty 0 15  
+R1(config-line)#logging synchronous  
+R1(config-line)#password cisco  
+R1(config-line)#login  
+R1(config-if)#do wr  
 
 **Настройка R2**
 
-Router>en
-Router#clock set 14:10:00 june 23 2022
-Router#conf t
-Router(config)#hostname R2
-R2(config)#no ip domain-lookup
-R2(config)#enable secret class
-R2(config)#service password-encryption
-R2(config)#banner motd ###ENTRY CLOSED!!!#
-R2(config)#line con 0
-R2(config-line)#logging synchronous
-R2(config-line)#password cisco
-R2(config-line)#login
-R2(config)#line vty 0 15
-R2(config-line)#logging synchronous
-R2(config-line)#password cisco
-R2(config-line)#login
-R2(config-line)#int range g0/0/0-1
-R2(config-if)#no shu
-R2(config-if)#do wr 
+Router>en  
+Router#clock set 14:10:00 june 23 2022  
+Router#conf t  
+Router(config)#hostname R2  
+R2(config)#no ip domain-lookup  
+R2(config)#enable secret class   
+R2(config)#service password-encryption  
+R2(config)#banner motd ###ENTRY CLOSED!!!#  
+R2(config)#line con 0  
+R2(config-line)#logging synchronous  
+R2(config-line)#password cisco  
+R2(config-line)#login  
+R2(config)#line vty 0 15  
+R2(config-line)#logging synchronous  
+R2(config-line)#password cisco  
+R2(config-line)#login  
+R2(config-line)#int range g0/0/0-1  
+R2(config-if)#no shu  
+R2(config-if)#do wr   
 
 
 *Шаг 4.	Настройка маршрутизации между сетями VLAN на маршрутизаторе R1*
