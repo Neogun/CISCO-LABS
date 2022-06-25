@@ -4,7 +4,7 @@
 
 ### Топология
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_12/Images/Topology.jpg)
 
 
 ------------
@@ -38,7 +38,7 @@
 
 *Шаг 1. Подключите кабели сети согласно приведенной топологии.*
 
-![IMAGE]()
+![IMAGE](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_12/Images/Network%20PT.jpg)
 
 
 *Шаг 2. Произведите базовую настройку маршрутизаторов.*
@@ -180,7 +180,7 @@ R1(config-if)# ip nat outside
 
 a.	С PC-B,  запустите эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. Если эхо-запрос не прошел, выполните процес поиска и устранения неполадок. На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_12/Images/ping%20PC-B%20to%20Lo1%20R2.jpg)
 
 
 **!~ В Cisco Packet Tracer команда присутствует, но у меня маршрутизатор не реагировал на неё.**
@@ -197,7 +197,7 @@ Total number of translations: 2
 
 b.	С PC-A, запустите  эхо-запрос интерфейса Lo1 (209.165.200.1) на R2. Если эхо-запрос не прошел, выполните отладку. На R1 отобразите таблицу NAT на R1 с помощью команды show ip nat translations.
 
-![image]()
+![image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_12/Images/ping%20PC-A%20to%20Lo1%20R2.jpg)
 
 **!~ В Cisco Packet Tracer команда присутствует, но у меня маршрутизатор не реагировал на неё.**
 
