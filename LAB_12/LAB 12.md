@@ -277,6 +277,7 @@ Pro Inside global Inside local Outside local Outside global
 Total number of translations: 1  
 
 Обратите внимание, что есть только одна трансляция. Отправьте ping еще раз, и быстро вернитесь к маршрутизатору и введите команду show ip nat translations verbose , и вы увидите, что произошло.
+  
 R1# show ip nat translations verbose   
 Pro Inside global Inside local Outside local Outside global  
 icmp 209.165.200.226:1 192.168.1.2:1 209.165.200.1:1 209.165.200.1:1   
