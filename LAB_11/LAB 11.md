@@ -62,45 +62,45 @@
 
 **Настройка R1 **
 
-Router>en
-Router#clock set 12:05:00 june 19 2022
-Router#conf t
-Router(config)#hostname R1
-R1(config)#no ip domain lookup
-R1(config)#enable secret class
-R1(config)#service password-encryption
-R1(config)#banner motd ###ENTRY CLOSED!!!#
-R1(config)#line con 0
-R1(config-line)#logging synchronous
-R1(config-line)#password cisco
-R1(config-line)#login
-R1(config)#line vty 0 15
-R1(config-line)#logging synchronous
-R1(config-line)#password cisco
-R1(config-line)#login
-R1(config-if)#do wr
+Router>en  
+Router#clock set 12:05:00 june 19 2022  
+Router#conf t  
+Router(config)#hostname R1  
+R1(config)#no ip domain-lookup  
+R1(config)#enable secret class  
+R1(config)#service password-encryption  
+R1(config)#banner motd ###ENTRY CLOSED!!!#  
+R1(config)#line con 0  
+R1(config-line)#logging synchronous  
+R1(config-line)#password cisco  
+R1(config-line)#login  
+R1(config)#line vty 0 15  
+R1(config-line)#logging synchronous  
+R1(config-line)#password cisco  
+R1(config-line)#login  
+R1(config-if)#do wr  
 
 **Настройка R2**
 
-Router>en
-Router#clock set 12:05:00 june 19 2022
-Router#conf t
-Router(config)#hostname R1
-R2(config)#no ip domain lookup
-R2(config)#enable secret class
-R2(config)#service password-encryption
-R2(config)#banner motd ###ENTRY CLOSED!!!#
-R2(config)#line con 0
-R2(config-line)#logging synchronous
-R2(config-line)#password cisco
-R2(config-line)#login
-R2(config)#line vty 0 15
-R2(config-line)#logging synchronous
-R2(config-line)#password cisco
-R2(config-line)#login
-R2(config-line)#int range g0/0/0-1
-R2(config-if)#no shu
-R2(config-if)#do wr 
+Router>en  
+Router#clock set 12:05:00 june 19 2022  
+Router#conf t  
+Router(config)#hostname R2 
+R2(config)#no ip domain lookup  
+R2(config)#enable secret class  
+R2(config)#service password-encryption  
+R2(config)#banner motd ###ENTRY CLOSED!!!#  
+R2(config)#line con 0  
+R2(config-line)#logging synchronous  
+R2(config-line)#password cisco  
+R2(config-line)#login  
+R2(config)#line vty 0 15  
+R2(config-line)#logging synchronous  
+R2(config-line)#password cisco    
+R2(config-line)#login  
+R2(config-line)#int range g0/0/0-1  
+R2(config-if)#no shu  
+R2(config-if)#do wr   
 
 
 ------------
@@ -110,49 +110,49 @@ R2(config-if)#do wr
 
 **Настройка S1**
 
-Switch>
-Switch>en
-Switch#clock set 11:55:00 june 19 2022
-Switch#conf t
-Switch(config)#hostname S1
-S1(config)#no ip domain lookup
-S1(config)#enable secret class
-S1(config)#service password-encryption
-S1(config)#banner motd ###ENTRY CLOSED!!!###
-S1(config)#line con 0
-S1(config-line)#logging synchronous
-S1(config-line)#password cisco
-S1(config-line)#login
-S1(config-line)#line vty 0 15
-S1(config-line)#logging synchronous
-S1(config-line)#password cisco
-S1(config-line)#login
-S1(config-if-range)#do wr
-Building configuration...
-[OK]
+Switch>  
+Switch>en  
+Switch#clock set 11:55:00 june 19 2022  
+Switch#conf t  
+Switch(config)#hostname S1  
+S1(config)#no ip domain-ookup  
+S1(config)#enable secret class  
+S1(config)#service password-encryption  
+S1(config)#banner motd ###ENTRY CLOSED!!!###  
+S1(config)#line con 0  
+S1(config-line)#logging synchronous  
+S1(config-line)#password cisco  
+S1(config-line)#login  
+S1(config-line)#line vty 0 15  
+S1(config-line)#logging synchronous  
+S1(config-line)#password cisco  
+S1(config-line)#login 
+S1(config-if-range)#do wr  
+Building configuration...  
+[OK]  
 
 **Настройка S2**
 
-Switch>
-Switch>en
-Switch#clock set 11:55:00 june 19 2022
+Switch>  
+Switch>en  
+Switch#clock set 11:55:00 june 19 2022  
 Switch#conf t
-Switch(config)#hostname S1
-S2(config)#no ip domain lookup
-S2(config)#enable secret class
-S2(config)#service password-encryption
-S2(config)#banner motd ###ENTRY CLOSED!!!###
-S2(config)#line con 0
-S2(config-line)#logging synchronous
-S2(config-line)#password cisco
-S2(config-line)#login
-S2(config-line)#line vty 0 15
-S2(config-line)#logging synchronous
-S2(config-line)#password cisco
-S2(config-line)#login
-S2(config-if-range)#do wr
-Building configuration...
-[OK]
+Switch(config)#hostname S2
+S2(config)#no ip domain-lookup  
+S2(config)#enable secret class  
+S2(config)#service password-encryption  
+S2(config)#banner motd ###ENTRY CLOSED!!!###  
+S2(config)#line con 0  
+S2(config-line)#logging synchronous  
+S2(config-line)#password cisco  
+S2(config-line)#login  
+S2(config-line)#line vty 0 15  
+S2(config-line)#logging synchronous  
+S2(config-line)#password cisco  
+S2(config-line)#login  
+S2(config-if-range)#do wr  
+Building configuration...  
+[OK]  
 
 
 ------------
