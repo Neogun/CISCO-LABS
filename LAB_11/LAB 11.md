@@ -244,19 +244,19 @@ b.	Выполните команду show vlan brief, чтобы убедить�
 
 a.	Измените режим порта коммутатора на интерфейсе F0/1, чтобы принудительно создать магистральную связь. Не забудьте сделать это на обоих коммутаторах. и b. В рамках конфигурации транка установите для native vlan значение 1000 на обоих коммутаторах. При настройке двух интерфейсов для разных собственных VLAN сообщения об ошибках могут отображаться временно.
 
-S1(config)#int fa0/1
-S1(config-if)#switchport mode trunk 
-S1(config-if)#switchport trunk native vlan 1000
+S1(config)#int fa0/1   
+S1(config-if)#switchport mode trunk   
+S1(config-if)#switchport trunk native vlan 1000  
 
-S2(config)#int fa0/1
-S2(config-if)#switchport mode trunk 
-S2(config-if)#switchport trunk native vlan 1000
+S2(config)#int fa0/1  
+S2(config-if)#switchport mode trunk   
+S2(config-if)#switchport trunk native vlan 1000  
 
 c.	В качестве другой части конфигурации транка укажите, что VLAN 10, 20, 30 и 1000 разрешены в транке.
 
-S1(config-if)switchport trunk allowed vlan 10,20,30,1000
+S1(config-if)switchport trunk allowed vlan 20,30,40, 1000
 
-S2(config-if)#switchport trunk allowed vlan 10,20,30,1000
+S2(config-if)#switchport trunk allowed vlan 20,30,40,1000  
 
 d.	Выполните команду show interfaces trunk для проверки портов магистрали, собственной VLAN и разрешенных VLAN через магистраль.
 
@@ -272,9 +272,9 @@ d.	Выполните команду show interfaces trunk для проверк
 a.	Настройте интерфейс S1 F0/5 с теми же параметрами транка, что и F0/1. Это транк до маршрутизатора.
 
 S1(config)#int fa0/5  
-S1(config-if)#switchport mode trunk   
-S1(config-if)#switchport trunk native vlan 1000  
-S1(config-if)switchport trunk allowed vlan 10,20,30,1000  
+S1(config-if)#switchport mode trunk    
+S1(config-if)#switchport trunk native vlan 1000    
+S1(config-if)switchport trunk allowed vlan 20,30,,40,1000    
 
 b.	Сохраните текущую конфигурацию в файл загрузочной конфигурации.
 
@@ -297,31 +297,31 @@ c.	Используйте команду show interfaces trunk для прове
 
 a.	Активируйте интерфейс G0/0/1 на маршрутизаторе.
 
-R1(config)#int g0/0/1
-R1(config-if)#no shu
+R1(config)#int g0/0/1  
+R1(config-if)#no shu  
 
 b.	Настройте подинтерфейсы для каждой VLAN, как указано в таблице IP-адресации. Все подинтерфейсы используют инкапсуляцию 802.1Q. Убедитесь, что подинтерфейс для собственной VLAN не имеет назначенного IP-адреса. Включите описание для каждого подинтерфейса.
 
-R1(config)#int g0/0/1.20
-R1(config-subif)#ip address 10.20.0.1 255.255.255.0
-R1(config-subif)#encapsulation dot1q
-R1(config-subif)#description MGMT
-R1(config)#int g0/0/1.30
-R1(config-subif)#ip address 10.30.0.1 255.255.255.0
-R1(config-subif)#encapsulation dot1q
-R1(config-subif)#description Operations
-R1(config)#int g0/0/1.40
-R1(config-subif)#ip address 10.40.0.1 255.255.255.0
-R1(config-subif)#encapsulation dot1q
-R1(config-subif)#description Sales
-R1(config)#int g0/0/1.1000
-R1(config-subif)#encapsulation dot1q
-R1(config-subif)#description Own
+R1(config)#int g0/0/1.20  
+R1(config-subif)#ip address 10.20.0.1 255.255.255.0  
+R1(config-subif)#encapsulation dot1q  
+R1(config-subif)#description MGMT  
+R1(config)#int g0/0/1.30  
+R1(config-subif)#ip address 10.30.0.1 255.255.255.0  
+R1(config-subif)#encapsulation dot1q  
+R1(config-subif)#description Operations  
+R1(config)#int g0/0/1.40  
+R1(config-subif)#ip address 10.40.0.1 255.255.255.0  
+R1(config-subif)#encapsulation dot1q  
+R1(config-subif)#description Sales  
+R1(config)#int g0/0/1.1000  
+R1(config-subif)#encapsulation dot1q  
+R1(config-subif)#description Own  
 
 c.	Настройте интерфейс Loopback 1 на R1 с адресацией из приведенной выше таблицы.
 
-R1(config)#int Lo1
-R1(config-if)#ip address 172.16.1.1 255.255.255.0
+R1(config)#int Lo1  
+R1(config-if)#ip address 172.16.1.1 255.255.255.0  
 
 d.	С помощью команды show ip interface brief проверьте конфигурацию подынтерфейса.
 
@@ -329,10 +329,9 @@ d.	С помощью команды show ip interface brief проверьте �
 
 *Шаг 2. Настройка интерфейса R2 g0/0/1 с использованием адреса из таблицы и маршрута по умолчанию с адресом следующего перехода 10.20.0.1*
 
-R2(config)#ip default-ga 10.20.0.1
-R2(config)#int g0/0/1
-R2(config-if)#no shu
-R2(config-if)#ip address 10.20.0.4 255.255.255.0
+R2(config)#ip route 0.0.0.0 0.0.0.0 10.20.0.1  
+R2(config-if)#no shu  
+R2(config-if)#ip address 10.20.0.4 255.255.255.0  
 
 
 ------------
@@ -357,34 +356,35 @@ c.	Генерируйте криптоключи с помощью 1024 битн
 соединения и с локальной аутентификацией.
 
 
-R1(config)#ip domain-name ccna-lab.com
-R1(config)#crypto key generate  rsa general-keys modulus 1024
-R1(config)#line vty 0 4
-R1(config-line)#transport input ssh
+R1(config)#ip domain-name ccna-lab.com  
+R1(config)#crypto key generate  rsa general-keys modulus 1024  
+R1(config)#line vty 0 4  
+R1(config-line)#transport input ssh  
 
-R2(config)#ip domain-name ccna-lab.com  
-R2(config)#crypto key generate  rsa general-keys modulus 1024  
-R2(config)#line vty 0 4  
-R2(config-line)#transport input ssh  
+R2(config)#ip domain-name ccna-lab.com    
+R2(config)#crypto key generate  rsa general-keys modulus 1024    
+R2(config)#line vty 0 4    
+R2(config-line)#transport input ssh    
 
-S1(config)#ip domain-name ccna-lab.com  
-S1(config)#crypto key generate  rsa general-keys modulus 1024  
+S1(config)#ip domain-name ccna-lab.com    
+S1(config)#crypto key generate  rsa general-keys modulus 1024   
 S1(config)#line vty 0 4  
 S1(config-line)#transport input ssh  
 
 
-S2(config)#ip domain-name ccna-lab.com
-S2(config)#crypto key generate  rsa general-keys modulus 1024
-S2(config)#line vty 0 4
-S2(config-line)#transport input ssh
+S2(config)#ip domain-name ccna-lab.com  
+S2(config)#crypto key generate  rsa general-keys modulus 1024  
+S2(config)#line vty 0 4  
+S2(config-line)#transport input ssh  
 
 *Шаг 2. Включите защищенные веб-службы с проверкой подлинности на R1.*
 
-a.	Включите сервер HTTPS на R1.
-R1(config)# ip http secure-server 
+a.	Включите сервер HTTPS на R1.  
+R1(config)# ip http secure-server   
 
 b.	Настройте R1 для проверки подлинности пользователей, пытающихся подключиться к веб-серверу.
-R1(config)# ip http authentication local
+
+R1(config)# ip http authentication local  
 
 **Команды не доступны в Packet Tracer.**
 
