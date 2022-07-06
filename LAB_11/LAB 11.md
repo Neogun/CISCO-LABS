@@ -183,13 +183,13 @@ S2(config-vlan)#name Own
 
 b.	Настройте интерфейс управления и шлюз по умолчанию на каждом коммутаторе, используя информацию об IP-адресе в таблице адресации.
 
-S1(config)#ip default-gateway 10.20.0.1
+S1(config)#ip default-gateway 10.20.0.1  
 S1(config)#int vlan 20  
 S1(config-if)#  
 %LINK-5-CHANGED: Interface Vlan20, changed state to up 
 S1(config-if)#ip address 10.20.0.2 255.255.255.0  
 
-S2(config)#ip default-gateway 10.20.0.1
+S2(config)#ip default-gateway 10.20.0.1  
 S2(config)#int vlan 20  
 S2(config-if)#  
 %LINK-5-CHANGED: Interface Vlan20, changed state to up 
