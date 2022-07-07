@@ -232,6 +232,7 @@ b.	Выполните команду show vlan brief, чтобы убедить�
 ![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/show%20vlan%20brief%20S1.jpg)
 
 **show vlan brief S2**
+
 ![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/show%20vlan%20brief%20S2.jpg)
 
 
