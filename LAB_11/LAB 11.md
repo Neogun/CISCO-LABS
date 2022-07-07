@@ -426,19 +426,20 @@ R1(config)# ip http authentication local
 Откройте окно конфигурации*
  
 
+R1(config)#ip access-list extended LAB  
+R1(config-ext-nacl)#deny tcp 10.40.0.0 0.255.255.255 10.20.0.0 0.255.255.255 eq 22   
+R1(config-ext-nacl)#deny tcp 10.40.0.0 0.255.255.255 10.20.0.0 0.255.255.255 eq www   
+R1(config-ext-nacl)#deny tcp 10.40.0.0 0.255.255.255 10.20.0.0 0.255.255.255 eq 443  
+R1(config-ext-nacl)#deny icmp 10.40.0.0 0.255.255.255 10.20.0.0 0.255.255.255  
+R1(config-ext-nacl)#deny icmp 10.40.0.0 0.255.255.255 10.40.0.0 0.255.255.255  
+R1(config-ext-nacl)#permit icmp 10.40.0.0 0.255.255.255 any  
+R1(config-ext-nacl)#deny icmp 10.30.0.0 0.255.255.255 10.40.0.0 0.255.255.255  
+R1(config-ext-nacl)#permit icmp 10.30.0.0 0.255.255.255 any  
+R1(config-ext-nacl)#permit ip any any   
 
-S2(config)#ip access-list extended Sales
-S2(config-ext-nacl)#deny tcp 10.40.0.0 0.255.255.255 10.20.0.0 0.255.255.255 eq 22 
-S2(config-ext-nacl)#deny tcp 10.40.0.0 0.255.255.255 10.20.0.0 0.255.255.255 eq www 
-S2(config-ext-nacl)#deny tcp 10.40.0.0 0.255.255.255 10.20.0.0 0.255.255.255 eq 443
-S2(config-ext-nacl)#deny icmp 10.40.0.0 0.255.255.255 10.20.0.0 0.255.255.255
-S2(config-ext-nacl)#deny icmp 10.40.0.0 0.255.255.255 10.40.0.0 0.255.255.255
-S2(config-ext-nacl)#permit icmp 10.40.0.0 0.255.255.255 any
-S2(config-ext-nacl)#permit ip any any 
 
-S1(config)ip access-list extended Operations
-S1(config-ext-nacl)#deny icmp 10.30.0.0 0.255.255.255 10.40.0.0 0.255.255.255
-S1(config-ext-nacl)#permit icmp 10.30.0.0 0.255.255.255 any
+R1(config)#int g0/0/1  
+R1(config-if)#ip access-group LAB  
 
 
 *Шаг 3. Убедитесь, что политики безопасности применяются развернутыми списками доступа.*
