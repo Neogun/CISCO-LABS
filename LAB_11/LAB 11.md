@@ -286,7 +286,7 @@ Building configuration...
 
 c.	Используйте команду show interfaces trunk для проверки настроек транка.
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/show%20interface%20trunk%20S1%20v2.jpg)
 
 
 ------------
@@ -397,9 +397,9 @@ R1(config)# ip http authentication local
 
 *Шаг 1. Настройте узлы ПК.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/PC-A.jpg)
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/PC-B.jpg)
 
 *Шаг 2. Выполните следующие тесты. Эхозапрос должен пройти успешно.*
 
