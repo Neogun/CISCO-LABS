@@ -305,16 +305,16 @@ R1(config-if)#no shu
 b.	Настройте подинтерфейсы для каждой VLAN, как указано в таблице IP-адресации. Все подинтерфейсы используют инкапсуляцию 802.1Q. Убедитесь, что подинтерфейс для собственной VLAN не имеет назначенного IP-адреса. Включите описание для каждого подинтерфейса.
 
 R1(config)#int g0/0/1.20  
-R1(config-subif)#ip address 10.20.0.1 255.255.255.0  
-R1(config-subif)#encapsulation dot1q  
+R1(config-subif)#encapsulation dot1Q 20
+R1(config-subif)#ip address 10.20.0.1 255.255.255.0
 R1(config-subif)#description MGMT  
 R1(config)#int g0/0/1.30  
-R1(config-subif)#ip address 10.30.0.1 255.255.255.0  
-R1(config-subif)#encapsulation dot1q  
+R1(config-subif)#encapsulation dot1Q 30
+R1(config-subif)#ip address 10.30.0.1 255.255.255.0 
 R1(config-subif)#description Operations  
 R1(config)#int g0/0/1.40  
-R1(config-subif)#ip address 10.40.0.1 255.255.255.0  
-R1(config-subif)#encapsulation dot1q  
+R1(config-subif)#encapsulation dot1Q 40
+R1(config-subif)#ip address 10.40.0.1 255.255.255.0
 R1(config-subif)#description Sales  
 R1(config)#int g0/0/1.1000  
 R1(config-subif)#encapsulation dot1q  
