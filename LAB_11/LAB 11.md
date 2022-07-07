@@ -266,6 +266,7 @@ d.	Выполните команду show interfaces trunk для проверк
 ![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/show%20interface%20trunk%20S1.jpg)
 
 **show interfaces trunk S2**
+
 ![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/show%20interface%20trunk%20S2.jpg)
 
 *Шаг 2. Вручную настройте магистральный интерфейс F0/5 на коммутаторе S1.*
