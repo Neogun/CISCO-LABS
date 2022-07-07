@@ -7,7 +7,7 @@
 
 ### Топология
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/Topology.jpg)
 
 
 
@@ -56,7 +56,7 @@
 
 *Шаг 1. Создайте сеть согласно топологии.*
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/Network_PT.jpg)
 
 *Шаг 2. Произведите базовую настройку маршрутизаторов.*
 
@@ -229,10 +229,10 @@ b.	Выполните команду show vlan brief, чтобы убедить�
 
 **show vlan brief S1**
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/show%20vlan%20brief%20S1.jpg)
 
 **show vlan brief S2**
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/show%20vlan%20brief%20S2.jpg)
 
 
 ------------
@@ -262,10 +262,10 @@ d.	Выполните команду show interfaces trunk для проверк
 
 **show interfaces trunk S1**
 
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/show%20interface%20trunk%20S1.jpg)
 
 **show interfaces trunk S2**
-![Image]()
+![Image](https://github.com/Neogun/CISCO-LABS/blob/main/LAB_11/Images/show%20interface%20trunk%20S2.jpg)
 
 *Шаг 2. Вручную настройте магистральный интерфейс F0/5 на коммутаторе S1.*
 
@@ -419,3 +419,18 @@ R1(config)# ip http authentication local
 
 
 ### Часть 7. Настройка и проверка списков контроля доступа (ACL)
+
+
+
+
+| От  | Протокол  | Назначение  | Результат|
+| ------------ | ------------ | ------------ | ------------ |
+| PC-A  | Ping  | 10.40.0.10  | Сбой  |
+|  PC-A | Ping  | 10.20.0.1  |  Успешно |
+|PC-B   | Ping  | 10.30.0.10  |Сбой   |
+| PC-B  |  Ping | 10.20.0.1  |Сбой  |
+|PC-B| Ping  | 172.16.1.1  |Успешно   |
+|  PC-B |   HTTPS   | 10.20.0.1  | Не реализовано в CPT  |
+| PC-B  |  HTTPS | 172.16.1.1  | Не реализовано в CPT    |
+| PC-B  |SSH | 10.20.0.1  | Сбой  |
+|PC-B   |  SSH |172.16.1.1   | Успешно  |
